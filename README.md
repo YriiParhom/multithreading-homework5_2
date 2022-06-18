@@ -1,1 +1,1 @@
-# multithreading-homework5_2
+# Долой пробелы
