@@ -8,7 +8,7 @@ import java.nio.charset.StandardCharsets;
 public class Server {
     public static void main(String[] args) throws IOException {
         final ServerSocketChannel serverChannel = ServerSocketChannel.open();
-        serverChannel.bind(new InetSocketAddress("localhost", 8088));
+        serverChannel.bind(new InetSocketAddress("localhost", 8090));
 
         while (true) {
             try (SocketChannel socketChannel = serverChannel.accept()) {

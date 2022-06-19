@@ -7,9 +7,13 @@ import java.util.Scanner;
 
 public class Client {
     public static void main(String[] args) throws IOException {
-        InetSocketAddress socketAddress = new InetSocketAddress("127.0.0.1", 8088);
+        InetSocketAddress socketAddress = new InetSocketAddress("127.0.0.1", 8090);
         final SocketChannel socketChannel = SocketChannel.open();
         socketChannel.connect(socketAddress);
+
+        if (socketChannel.isConnected()) {
+            System.out.println("Соединение установлено...");
+        }
 
         try (Scanner scanner = new Scanner(System.in)) {
             final ByteBuffer inputBuffer = ByteBuffer.allocate(2 << 10);
